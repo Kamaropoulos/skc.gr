@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  -->
     <title>SK Consulting</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="img/sk-light.svg"
-      rel="icon"
-    />
+    <link href="img/sk-light.svg" rel="icon" />
     <!-- <link
       href="img/sk-dark.svg"
       rel="icon"
@@ -20,7 +18,18 @@
         background-color: white;
       }
 
-      #spinner {
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      #logo {
         position: absolute;
         margin: auto;
         top: 0;
@@ -29,11 +38,12 @@
         bottom: 0;
         width: 25vh;
         height: 25vh;
+        animation: fadeIn 4s;
       }
     </style>
   </head>
 
   <body>
-    <img id="spinner" src="img/sk-light.svg" alt="" />
+    <img id="logo" src="img/sk-light.svg" alt="" />
   </body>
 </html>
