@@ -1,0 +1,242 @@
+/*** 
+=============================================
+    Team Style1 Area Css
+=============================================
+***/
+.team-style1-area {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 80px;
+    z-index: 10;
+}
+
+.team-style1-area .auto-container {
+    max-width: 1600px;
+}
+
+.single-team-style1 {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.single-team-style1 .img-holder {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 75px;
+}
+
+.single-team-style1 .img-holder .inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: var(--thm-bg);
+    z-index: 1;
+}
+
+.single-team-style1 .img-holder .inner img {
+    width: 100%;
+    mix-blend-mode: luminosity;
+    transition: all 500ms linear;
+    transition-delay: 0.2s;
+}
+
+.single-team-style1:hover .img-holder .inner img {
+    transform: scale(1.1) rotate(0deg);
+    opacity: 0.20;
+    mix-blend-mode: normal;
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+}
+
+
+
+
+.single-team-style1 .title-holder {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 24px 0 0px;
+    background-color: #ffffff;
+    transform: perspective(400px) translateY(80px);
+    transform-origin: bottom;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    z-index: 2;
+}
+
+.single-team-style1:hover .title-holder {
+    transform: perspective(400px) translateY(0px);
+    transition: all 700ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-team-style1 .title-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--thm-base);
+    transform: scaleX(0);
+    transition: all 100ms linear;
+    transition-delay: 0.5s;
+}
+
+.single-team-style1:hover .title-holder::before {
+    transform: scaleX(1.0);
+    transition: all 900ms linear;
+    transition-delay: 0.3s;
+}
+
+.single-team-style1 .title-holder h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.single-team-style1 .title-holder h2 a {
+    color: var(--thm-black);
+}
+
+.single-team-style1 .title-holder h2 a:hover {
+    color: var(--thm-base);
+}
+
+.single-team-style1 .title-holder h3 {
+    color: var(--thm-gray);
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: var(--thm-font);
+}
+
+.single-team-style1 .title-holder .social-links {
+    position: relative;
+    display: block;
+    margin-top: 27px;
+}
+
+.single-team-style1 .title-holder .social-links li {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.single-team-style1 .title-holder .social-links li:last-child {
+    margin-right: 0px;
+}
+
+.single-team-style1 .title-holder .social-links li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--thm-primary);
+    color: var(--thm-black);
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    z-index: 1;
+}
+
+.single-team-style1 .title-holder .social-links li a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--thm-base);
+    content: "";
+    z-index: -1;
+    transform: scale(0.0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+}
+
+.single-team-style1 .title-holder .social-links li a:hover::before {
+    transform: scaleX(1.0);
+}
+
+.single-team-style1 .title-holder .social-links li a:hover {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** 
+=============================================
+    Team Page Css
+=============================================
+***/
+.team-page {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 80px;
+    z-index: 10;
+}
+
+.team-style1-carousel.owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+
+.team-style1-carousel.owl-carousel .owl-stage-outer .owl-item {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    -ms-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+}
+
+.team-style1-carousel.owl-carousel .owl-stage-outer .owl-item.active {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: all;
+}

@@ -1,0 +1,146 @@
+/*** 
+=============================================
+   Testimonial Style1 Area Css
+=============================================
+***/
+.testimonial-style1-area {
+    position: relative;
+    display: block;
+    padding: 120px 0 120px;
+    background: var(--thm-primary);
+    z-index: 10;
+}
+
+.testimonial-style1-content {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+
+.single-testimonial-style1 {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 50px 60px 0;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-testimonial-style1:hover {
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.single-testimonial-style1 .text {
+    position: relative;
+    display: block;
+}
+
+.single-testimonial-style1 .text p {
+    font-size: 20px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.single-testimonial-style1 .bottom-box {
+    position: relative;
+    display: block;
+    padding-top: 43px;
+    padding-bottom: 48px;
+}
+
+.single-testimonial-style1 .bottom-box .client-name {
+    position: relative;
+    display: block;
+}
+
+.single-testimonial-style1 .bottom-box .client-name h3 {
+    color: var(--thm-black);
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 0 2px;
+}
+
+.single-testimonial-style1 .bottom-box .client-name span {
+    color: var(--thm-base);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.single-testimonial-style1 .bottom-box .client-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--thm-primary);
+    padding: 15px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-testimonial-style1:hover .bottom-box .client-img {
+    background-color: var(--thm-base);
+}
+
+.single-testimonial-style1 .bottom-box .client-img .inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: var(--thm-bg);
+}
+
+.single-testimonial-style1 .bottom-box .client-img .inner img {
+    width: 100%;
+    mix-blend-mode: luminosity;
+}
+
+.single-testimonial-style1:hover .bottom-box .client-img .inner img {
+    mix-blend-mode: normal;
+}
+
+
+
+.testimonial-carousel.owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+
+.testimonial-carousel.owl-carousel .owl-stage-outer .owl-item {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.2);
+    -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.2);
+    transform: perspective(400px) rotateX(0deg) scaleY(1.2);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+}
+
+.testimonial-carousel.owl-carousel .owl-stage-outer .owl-item.active {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: all;
+}
+
+
+
+/*** 
+=============================================
+   Testimonial Page Css
+=============================================
+***/
+.testimonial-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 80px;
+    background: var(--thm-primary);
+    z-index: 10;
+}
+
+.testimonial-page .single-testimonial-style1 {
+    margin-bottom: 40px;
+}

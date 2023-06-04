@@ -1,0 +1,137 @@
+/*** 
+=============================================
+    Breadcrumb area style
+=============================================
+***/
+.breadcrumb-area {
+    position: relative;
+    display: block;
+    padding: 106px 0 0px;
+    z-index: 11;
+}
+
+.breadcrumb-area-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: scroll;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--thm-bg);
+    background-blend-mode: luminosity;
+    z-index: 1;
+}
+
+.breadcrumb-area-bg:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--thm-bg);
+    opacity: 0.60;
+    content: "";
+    z-index: -1;
+}
+
+.breadcrumb-area .inner-content {
+    position: relative;
+    display: block;
+    padding: 124px 0 112px;
+    z-index: 10;
+}
+
+
+.breadcrumb-area .shape-box {
+    position: absolute;
+    top: 166px;
+    left: 160px;
+    bottom: 60px;
+    width: calc(100% - 85%);
+    background-color: var(--thm-base);
+    mix-blend-mode: soft-light;
+    -moz-transform: skew(20deg, 0deg);
+    -webkit-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    transform: skew(20deg, 0deg);
+    z-index: 1;
+}
+
+
+.breadcrumb-area .title {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.breadcrumb-area .title h2 {
+    color: #ffffff;
+    font-size: 55px;
+    line-height: 1.3em;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -0.02em;
+}
+
+
+.breadcrumb-menu {
+    position: relative;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.breadcrumb-menu ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-menu ul li {
+    position: relative;
+    display: block;
+    float: left;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding-right: 14px;
+    margin-right: 15px;
+    font-family: var(--thm-font);
+}
+
+.breadcrumb-menu ul li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.breadcrumb-menu ul li:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    bottom: 5px;
+    width: 1px;
+    background: #ffffff;
+    transform: rotate(25deg);
+}
+
+.breadcrumb-menu ul li:last-child:before {
+    display: none;
+}
+
+.breadcrumb-menu ul li a {
+    color: #ffffff;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.breadcrumb-menu ul li:hover a,
+.breadcrumb-menu ul li.active {
+    color: var(--thm-base);
+}

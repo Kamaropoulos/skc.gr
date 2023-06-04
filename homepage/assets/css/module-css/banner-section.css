@@ -1,0 +1,429 @@
+/*** 
+=====================================================
+	Main Slider style
+=====================================================
+***/
+.main-slider {
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.main-slider.style1 {
+    position: relative;
+    display: block;
+    background-color: #ffffff;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.main-slider .slide {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-slider .slide .image-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-color: var(--thm-bg);
+    background-blend-mode: luminosity;
+    transition: transform 7000ms ease, opacity 1500ms ease-in;
+    z-index: 1;
+}
+
+.main-slider .slide .image-layer:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: var(--thm-bg);
+    opacity: 0.60;
+    z-index: -1;
+}
+
+.main-slider .active .slide .image-layer {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+
+.main-slider .content {
+    position: relative;
+    z-index: 11;
+}
+
+.main-slider .auto-container {
+    position: relative;
+}
+
+.main-slider .slide {
+    position: relative;
+    display: block;
+    padding-top: 205px;
+    padding-bottom: 100px;
+}
+
+.main-slider .shape-box {
+    position: absolute;
+    top: 205px;
+    left: 115px;
+    bottom: 100px;
+    right: 100%;
+    background-color: var(--thm-base);
+    mix-blend-mode: soft-light;
+    z-index: 1;
+    -moz-transform: skew(0deg, 0deg);
+    -webkit-transform: skew(0deg, 0deg);
+    -o-transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
+    transform: skew(0deg, 0deg);
+
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+}
+
+.main-slider .active .shape-box {
+    right: 65%;
+    -moz-transform: skew(20deg, 0deg);
+    -webkit-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    transform: skew(20deg, 0deg);
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease;
+}
+
+
+.main-slider .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 70px 0 100px;
+}
+
+
+.main-slider .content .big-title {
+    position: relative;
+    display: block;
+    margin-top: 21px;
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateY(0deg) translateY(-80px);
+    -ms-transform: perspective(400px) rotateY(0deg) translateY(-80px);
+    transform: perspective(400px) rotateY(0deg) translateY(-80px);
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+    z-index: 10;
+}
+
+.main-slider .active .content .big-title {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateY(0deg) translateY(0px);
+    -ms-transform: perspective(400px) rotateY(0deg) translateY(0px);
+    transform: perspective(400px) rotateY(0deg) translateY(0px);
+    -webkit-transition-delay: 1000ms;
+    -moz-transition-delay: 1000ms;
+    -ms-transition-delay: 1000ms;
+    -o-transition-delay: 1000ms;
+    transition-delay: 1000ms;
+}
+
+.main-slider .content .big-title h2 {
+    color: #ffffff;
+    font-size: 120px;
+    line-height: 0.9em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.main-slider .content .big-title h2 .dotted {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: var(--thm-base);
+    border-radius: 50%;
+}
+
+
+.main-slider .content .btns-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+    margin-top: 47px;
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateY(0deg) translateY(80px);
+    -ms-transform: perspective(400px) rotateY(0deg) translateY(80px);
+    transform: perspective(400px) rotateY(0deg) translateY(80px);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease;
+    z-index: 10;
+}
+
+.main-slider .active .content .btns-box {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateY(0deg) translateY(0px);
+    -ms-transform: perspective(400px) rotateY(0deg) translateY(0px);
+    transform: perspective(400px) rotateY(0deg) translateY(0px);
+    -webkit-transition-delay: 1500ms;
+    -moz-transition-delay: 1500ms;
+    -ms-transition-delay: 1500ms;
+    -o-transition-delay: 1500ms;
+    transition-delay: 1500ms;
+}
+
+.main-slider .content .btns-box a {}
+
+
+
+/*=== Main Slider Nav Style=========*/
+.main-slider .owl-theme .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    height: 150px;
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: scaleX(1.0) translateX(0px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 500ms ease;
+    z-index: 3;
+}
+
+.main-slider:hover .owl-theme .owl-nav {
+    opacity: 1;
+    transform: scaleX(1.0) translateY(-50%);
+}
+
+.main-slider .owl-theme .owl-nav .owl-prev,
+.main-slider .owl-theme .owl-nav .owl-next {
+    position: relative;
+    display: block;
+    height: 70px;
+    width: 70px;
+    background: rgba(255, 255, 255, .20);
+    border: 0px solid rgba(255, 255, 255, .20);
+    border-radius: 50%;
+    text-align: center;
+    color: rgba(255, 255, 255, .20);
+    font-size: 25px;
+    line-height: 70px;
+    font-weight: 100;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    transform: translateY(0px);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.main-slider .owl-theme .owl-prev span,
+.main-slider .owl-theme .owl-next span {
+    display: block;
+}
+
+.main-slider .owl-theme .owl-prev span:before {
+    transition: all 100ms ease;
+}
+
+.main-slider .owl-theme .owl-nav .owl-prev {
+    transform: rotate(180deg);
+}
+
+.main-slider .owl-theme .owl-nav .owl-next {
+    transform: rotate(0deg);
+}
+
+.main-slider .owl-theme .owl-nav .owl-prev:hover,
+.main-slider .owl-theme .owl-nav .owl-next:hover {
+    color: var(--thm-black);
+    background: rgba(255, 255, 255, 1.0);
+}
+
+.banner-carousel .owl-dots {
+    display: block;
+}
+
+
+
+
+.main-slider.style2 .owl-theme .owl-nav {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    opacity: 1;
+    line-height: 0;
+    transform: scaleX(1.0) translateY(-50px);
+    transition: all 500ms ease;
+}
+
+.main-slider.style2 .owl-theme .owl-nav .owl-prev {
+    position: absolute;
+    left: 20px;
+}
+
+.main-slider.style2 .owl-theme .owl-nav .owl-next {
+    position: absolute;
+    right: 20px;
+}
+
+
+
+
+
+
+
+/*===== Main Slider Dot Style ====*/
+.main-slider .banner-carousel.owl-carousel .owl-dots {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scaleX(1.0) translateX(0px);
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease;
+    display: none;
+}
+
+.main-slider .banner-carousel.owl-carousel .owl-dots:before {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 6px;
+    bottom: auto;
+    width: 3px;
+    height: 95px;
+    background: #262626;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-slider:hover .banner-carousel.owl-carousel .owl-dots {
+    opacity: 1;
+    transform: scaleX(1.0) translateX(0px);
+}
+
+.main-slider .banner-carousel.owl-carousel button.owl-dot {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #262626;
+    float: none;
+    border-radius: 50%;
+    margin: 20px 0px;
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    z-index: 1;
+}
+
+.main-slider .banner-carousel.owl-carousel button.owl-dot.active:before {
+    transform: scaleX(1.0);
+}
+
+.main-slider .banner-carousel.owl-carousel button.owl-dot.active {
+    background-image: -moz-linear-gradient(0deg, rgb(128, 183, 87) 0%, rgb(147, 188, 48) 40%, rgb(165, 193, 9) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(128, 183, 87) 0%, rgb(147, 188, 48) 40%, rgb(165, 193, 9) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(128, 183, 87) 0%, rgb(147, 188, 48) 40%, rgb(165, 193, 9) 100%);
+}
+
+
+
+
+/*** 
+=====================================================
+	Main Slider style2 Css
+=====================================================
+***/
+.main-slider.style2 {
+    position: relative;
+    display: block;
+}
+
+.main-slider.style2 .slide {
+    position: relative;
+    display: block;
+    padding-top: 166px;
+    padding-bottom: 200px;
+}
+
+.main-slider.style2 .slide .image-layer:before {
+    opacity: 0.60;
+}
+
+.main-slider.style2 .content {
+    padding: 0px 0 0px;
+}
+
+
+.main-slider.style2 .content .big-title h2 {
+    font-size: 110px;
+    line-height: 1.0em;
+}
